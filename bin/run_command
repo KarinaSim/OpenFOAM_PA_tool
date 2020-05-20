@@ -1,0 +1,10 @@
+#!/bin/bash
+#есть конфигурация .bashrc, которая настраивает среду для интерактивного использования bash
+. /opt/openfoam7/etc/bashrc
+text="snappyHexMesh"
+if [ "$1" = "$text" ]; then
+    $1 -overwrite
+else
+    $1
+fi
+exit
